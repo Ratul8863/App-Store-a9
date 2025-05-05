@@ -1,0 +1,154 @@
+[
+  {
+    "id": "app001",
+    "name": "Neptune",
+    "developer": "Programming Hero Ltd.",
+    "thumbnail": "https://i.ibb.co.com/G4QrGkVN/unnamed.png",
+    "banner": "https://i.ibb.co.com/xrt3mRf/thumbnail.png",
+    "downloads": 3500000,
+    "category": "Education",
+    "rating": 4.8,
+    "description": "Fun and interactive way to learn programming for all skill levels.",
+    "features": ["Interactive coding lessons", "Real-world projects", "Gamified learning"],
+    "reviews": [
+      {
+        "user": "coder_nadia",
+        "rating": 5,
+        "comment": "Best app for beginners!"
+      }
+    ]
+  },
+  {
+    "id": "app002",
+    "name": "FocusFlow",
+    "developer": "ZenSoft Inc.",
+    "thumbnail": "https://i.ibb.co.com/BVBvTtTT/Flux-Dev-a-lush-3d-render-of-Create-a-3-D-cartoonstyle-app-logo-0.jpg",
+    "banner": "https://i.ibb.co/sv7vZ8z/focusflow-banner.jpg",
+    "downloads": 1800000,
+    "category": "Productivity",
+    "rating": 4.5,
+    "description": "Boost your productivity with Pomodoro timers and task lists.",
+    "features": ["Pomodoro timer", "To-do list integration", "Progress reports"],
+    "reviews": [
+      {
+        "user": "workaholic22",
+        "rating": 4,
+        "comment": "Helps me focus better at work."
+      }
+    ]
+  },
+  {
+    "id": "app003",
+    "name": "Math Master",
+    "developer": "Edutech World",
+    "thumbnail": "https://i.ibb.co.com/4ZB6sn79/Leonardo-Phoenix-10-Design-an-educational-app-logo-featuring-a-1.jpg",
+    "banner": "https://i.ibb.co.com/5W38nnXV/Flux-Dev-a-surreal-and-vibrant-cinematic-photo-of-Create-a-fun-1.jpg",
+    "downloads": 2200000,
+    "category": "Education",
+    "rating": 4.6,
+    "description": "Master math from basic arithmetic to advanced algebra.",
+    "features": ["Step-by-step solutions", "Practice quizzes", "Daily challenges"],
+    "reviews": [
+      {
+        "user": "learner_joe",
+        "rating": 5,
+        "comment": "Great for exam prep!"
+      }
+    ]
+  },
+  {
+    "id": "app004",
+    "name": "GameZone",
+    "developer": "GameTime Studios",
+    "thumbnail": "https://i.ibb.co.com/6c2V972c/Leonardo-Phoenix-10-Generate-a-vibrant-and-energetic-gaming-ap-0.jpgg",
+    "banner": "https://i.ibb.co.com/xqCD5tsY/Flux-Dev-concept-design-sheet14-concept-art-Design-a-highenerg-1.jpg",
+    "downloads": 5000000,
+    "category": "Gaming",
+    "rating": 4.9,
+    "description": "All your favorite mini games in one app.",
+    "features": ["Multiplayer support", "Leaderboards", "Weekly events"],
+    "reviews": [
+      {
+        "user": "pro_gamer",
+        "rating": 5,
+        "comment": "Super fun and addictive!"
+      }
+    ]
+  },
+  {
+    "id": "app005",
+    "name": "StudyBuddy",
+    "developer": "Bright Minds",
+    "thumbnail": "https://i.ibb.co.com/nNV12VTV/Leonardo-Phoenix-10-Design-a-3-D-cartoonstyle-logo-featuring-tw-2.jpg",
+    "banner": "https://i.ibb.co.com/DDkhnf96/Flux-Dev-Create-a-3-D-cartoon-banner-of-two-animated-student-ch-3.jpg",
+    "downloads": 1450000,
+    "category": "Education",
+    "rating": 4.4,
+    "description": "Find study partners and track your learning progress.",
+    "features": ["Partner matching", "Shared notes", "Flashcards"],
+    "reviews": [
+      {
+        "user": "studyqueen",
+        "rating": 4,
+        "comment": "Love studying with others!"
+      }
+    ]
+  },
+  {
+    "id": "app006",
+    "name": "Task Ninja",
+    "developer": "GetItDone Ltd.",
+    "thumbnail": "https://i.ibb.co.com/zTHQj7N5/Leonardo-Phoenix-10-Create-a-3-D-cartoon-logo-of-a-ninja-charac-1.jpg",
+    "banner": "https://i.ibb.co.com/0cgtnt1/taskninja-banner.jpg",
+    "downloads": 3000000,
+    "category": "Productivity",
+    "rating": 4.7,
+    "description": "Tame your to-do list with ease and efficiency.",
+    "features": ["Smart reminders", "Task prioritization", "Daily planner"],
+    "reviews": [
+      {
+        "user": "organized_anna",
+        "rating": 5,
+        "comment": "Keeps me on track every day."
+      }
+    ]
+  },
+  {
+    "id": "app007",
+    "name": "BattleZone X",
+    "developer": "EpicPlay Corp.",
+    "thumbnail": "https://i.ibb.co.com/v468CcBY/Flux-Dev-a-lush-3d-render-of-Generate-a-3-D-cartoonstyle-logo-o-3-1.jpg",
+    "banner": "https://i.ibb.co/sHGvsc5/battlezonex-banner.jpg",
+    "downloads": 6200000,
+    "category": "Gaming",
+    "rating": 4.6,
+    "description": "Multiplayer FPS game with stunning graphics and action.",
+    "features": ["Team battles", "Weapons upgrade", "Ranked mode"],
+    "reviews": [
+      {
+        "user": "sniperzack",
+        "rating": 5,
+        "comment": "Best mobile shooter out there!"
+      }
+    ]
+  },
+  {
+    "id": "app008",
+    "name": "CalmNote",
+    "developer": "MindfulTech",
+    "thumbnail": "https://i.ibb.co.com/S44NFZtJ/Flux-Dev-a-lush-3d-render-of-Design-a-3-D-cartoonstyle-logo-fea-2.jpg",
+    "banner": "https://i.ibb.co/DWWpxmm/calmnote-banner.jpg",
+    "downloads": 950000,
+    "category": "Productivity",
+    "rating": 4.3,
+    "description": "A minimalist note-taking app that keeps your thoughts organized.",
+    "features": ["Tag system", "Dark mode", "Auto-sync"],
+    "reviews": [
+      {
+        "user": "notetaker123",
+        "rating": 4,
+        "comment": "Simple and beautiful design."
+      }
+    ]
+  }
+]
