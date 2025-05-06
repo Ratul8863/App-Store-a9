@@ -34,7 +34,7 @@ const {handlesignout,users} = useContext(Valuecontext)
         
           <NavLink to='/' className="btn btn-ghost font-bold text-2xl flex">
           <img className='w-10 h-10 '  src="https://i.ibb.co.com/xQr2zTk/icons8-app-100.png" alt="" />
-            App-Store</NavLink>
+            <p className='text-sm md:text-2xl'>App-Store</p></NavLink>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">

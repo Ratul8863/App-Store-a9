@@ -1,4 +1,6 @@
 import React from 'react';
+import { NavLink } from 'react-router';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -26,14 +28,22 @@ const Footer = () => {
         </nav>
       </footer>
       <footer className="footer bg-base-200 text-base-content border-base-300 border-t px-10 py-4">
+        
+        <Link to='/'>
         <aside className="grid-flow-col items-center">
-          <img src="/public/icons8-app-100.png" alt="" />
-          <p>
-            APP-Store
-            <br />
-            Providing reliable apps 1992
-          </p>
-        </aside>
+         
+         <img src="https://i.ibb.co.com/xQr2zTk/icons8-app-100.png" alt="" />
+         <p>
+           APP-Store
+           <br />
+           Providing reliable apps 1992
+         </p>
+         
+       </aside>
+        </Link>
+        
+        
+        
         <nav className="md:place-self-center md:justify-self-end md:mt-[-100px]">
           <div className="grid grid-flow-col gap-4">
             <a href='https://www.youtube.com/'>
