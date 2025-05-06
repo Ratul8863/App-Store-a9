@@ -70,8 +70,7 @@ if (!/[^a-zA-Z0-9]/.test(Password))
               setusers(user)
             })
             console.log(user)
-             toast.success("Successfully Registered");
-          })
+            
           .catch(error => {
             console.log(error)
             
