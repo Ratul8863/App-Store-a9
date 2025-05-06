@@ -70,7 +70,7 @@ if (!/[^a-zA-Z0-9]/.test(Password))
               setusers(user)
             })
             console.log(user)
-             toast.success("Successfully Registered");
+            
           })
           .catch(error => {
             console.log(error)
@@ -78,7 +78,7 @@ if (!/[^a-zA-Z0-9]/.test(Password))
          
           });
        
-          navigate(`${location.state ? location.state : "/"}`)
+navigate(`${location.state ? location.state : "/"}`)
 
 
     }
