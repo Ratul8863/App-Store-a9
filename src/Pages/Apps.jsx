@@ -44,11 +44,11 @@ const Apps = () => {
 <Helmet>
         <title>App-Store | Apps</title>
        </Helmet>
-<div className="px-4 py-8 space-y-12">
+<div className="px-1 py-1 space-y-12 mb-8">
       {/* Slider */}
       <div
         ref={sliderRef}
-        className="relative w-full h-64 overflow-hidden rounded-xl mb-10"
+        className="relative w-full h-[420px] overflow-hidden rounded-xl mb-10"
         onMouseEnter={() => setIsHovered(true)}  // When mouse enters, pause the slider
         onMouseLeave={() => setIsHovered(false)} // When mouse leaves, resume the slider
       >

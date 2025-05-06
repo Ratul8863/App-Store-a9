@@ -116,7 +116,7 @@ if (notFound) {
        </Helmet>
     <div className="p-4 max-w-4xl mx-auto space-y-6">
       {/* Banner */}
-      <img src={banner} alt="App Banner" className="w-full h-64 object-cover rounded-xl" />
+      <img src={banner} alt="App Banner" className="w-full h-[380px] object-cover rounded-xl" />
 
       {/* Header */}
       <div className="flex items-center justify-between">
@@ -141,7 +141,7 @@ if (notFound) {
 
       {/* Info */}
       <div className="grid md:grid-cols-2 gap-6">
-        <img src={thumbnail} alt="App Thumbnail" className="w-full h-48 object-cover rounded" />
+        <img src={thumbnail} alt="App Thumbnail" className="w-10/12 h-54 object-cover rounded" />
         <div>
           <p><strong>🗂️ Category:</strong> {category}</p>
           <p><strong>⬇️ Downloads:</strong> {downloads}</p>

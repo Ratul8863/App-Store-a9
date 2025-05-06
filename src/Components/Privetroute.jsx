@@ -5,10 +5,10 @@ import Loading from '../Pages/Loading';
 
 const Privetroute = ({children}) => {
 const location =useLocation()
-console.log(location)
+// console.log(location)
 const {users,looading} = useContext(Valuecontext)
 
-console.log(users)
+// console.log(users)
 
 if (looading)
 {

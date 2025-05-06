@@ -11,19 +11,19 @@ const {handlelogin,handlegoogle} = useContext(Valuecontext)
 // console.log(value)
 
 const location = useLocation()
-const state=location.state
-console.log(location,state)
+// const state=location.state
+// console.log(location,state)
     const handlesubmit = (e)=> {
         e.preventDefault();
         const form =e.target;
         const email = form.email.value;
         const Password =form.Password.value;
-        console.log(email,Password)
+        // console.log(email,Password)
         
         handlelogin(email,Password)
         .then(result => {
-            const user = result.user;
-            console.log(user)
+            // const user = result.user;
+            // console.log(user)
             toast.success("Log in Successful");
             // alert("Log in Successful")
           navigate(`${location.state ? location.state : "/"}`)
@@ -32,7 +32,7 @@ console.log(location,state)
           })
           .catch(error => {
             const errorc=error.message;
-            console.log(errorc)
+            // console.log(errorc)
             seterrormsg(errorc)
 
             alert("Invalid email or password")
@@ -71,7 +71,7 @@ console.log(location,state)
 
       }
         
-console.log(erroemsg)
+// console.log(erroemsg)
 
 
     return (

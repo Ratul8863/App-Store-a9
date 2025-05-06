@@ -9,6 +9,7 @@ import AppDetails from '../Pages/AppDetails';
 import Privetroute from '../Components/Privetroute';
 import UserProfile from '../Pages/UserProfiile';
 import ErrorPages from '../Pages/ErrorPages'; // This is your 404 page
+import Loading from '../Pages/Loading';
 
 export const router = createBrowserRouter([
   {
@@ -19,12 +20,14 @@ export const router = createBrowserRouter([
       {
         index: true,
         loader: () => fetch('/data.json'),
-        element: <Home />
+        element: <Home />,
+        hydrateFallbackElement : <Loading></Loading>
       },
       {
         path: "/Apps",
         loader: () => fetch('/data.json'),
-        element: <Apps />
+        element: <Apps />,
+        hydrateFallbackElement : <Loading></Loading>
       },
       {
         path: "/Login",
@@ -41,7 +44,8 @@ export const router = createBrowserRouter([
           <Privetroute>
             <AppDetails />
           </Privetroute>
-        )
+        ),
+        hydrateFallbackElement : <Loading></Loading>
       },
       {
         path: "/UserProfile",

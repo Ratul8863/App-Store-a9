@@ -17,11 +17,17 @@ import { ToastContainer } from 'react-toastify';
 
 export const Valuecontext = createContext();
 
+
+
+
+
+
+
 const Root = () => {
   const [users, setusers] = useState(null);
   const [looading, setLooading] = useState(true);
   const navigate = useNavigate();
-
+  // const navigation = useNavigation();
   const handlelogin = (email, password) => signInWithEmailAndPassword(auth, email, password);
   const handlesignup = (email, password) => createUserWithEmailAndPassword(auth, email, password);
   const handlesignout = () => {
@@ -32,7 +38,7 @@ const Root = () => {
         navigate('/Login');
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
       });
   };
 
@@ -61,6 +67,7 @@ const Root = () => {
   };
 
   return (
+    <>
     <div className='max-w-[1200px] mx-auto'>
       <Valuecontext.Provider value={handlevalues}>
         <Navbar />
@@ -73,10 +80,13 @@ const Root = () => {
           <Outlet />
         )}
         
-        <Footer />
+        
         <ToastContainer></ToastContainer>
       </Valuecontext.Provider>
     </div>
+    <Footer />
+    </>
+    
   );
 };
 

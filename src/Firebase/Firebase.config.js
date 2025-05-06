@@ -5,12 +5,12 @@ import { getAuth } from "firebase/auth";
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCqGUYde69Ip2_YXt0Y5Y5OB-M9NCHMq1M",
-  authDomain: "appstore-by-ratul.firebaseapp.com",
-  projectId: "appstore-by-ratul",
-  storageBucket: "appstore-by-ratul.firebasestorage.app",
-  messagingSenderId: "225694796418",
-  appId: "1:225694796418:web:c639a1d18d1f39f955029b"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId,
 };
 
 // Initialize Firebase

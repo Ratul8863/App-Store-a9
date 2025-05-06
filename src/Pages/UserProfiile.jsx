@@ -4,6 +4,7 @@ import { Valuecontext } from "../Root/Root";
 import { FaUserCircle } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
 import { toast } from "react-toastify";
+import { Navigate, useNavigate } from 'react-router-dom';
 
 const UserProfile = () => {
   const { users } = useContext(Valuecontext);
@@ -13,10 +14,14 @@ const UserProfile = () => {
   const [isEditing, setIsEditing] = useState(false);
 
 
-
+const navigate = useNavigate()
 
 
   const handleUpdate = async () => {
+
+
+
+
     if (name.trim().length < 1) {
       toast.error("Name must be at least 1 character");
       return;
@@ -31,9 +36,21 @@ const UserProfile = () => {
       setIsEditing(false);
     } catch (error) {
       setMessage("❌ Error updating profile.");
-      console.error(error);
+      // console.error(error);
     }
   };
+
+
+
+  // if ( there is no user) return (
+  
+  //   <>
+  //      <Helmet>
+  //         <title>App-Store | My-Profile</title>
+  //        </Helmet>
+  //   <EmptyMsg></EmptyMsg>
+  //   </>
+  // )
 
   return (
    <>
@@ -59,14 +76,24 @@ const UserProfile = () => {
           )}
           <h3 className="text-xl font-semibold text-gray-700">{users?.displayName}</h3>
           <p className="text-gray-500">{users?.email}</p>
-          {!isEditing && (
-            <button
-              onClick={() => setIsEditing(true)}
-              className="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
-            >
-              Edit Profile
-            </button>
-          )}
+          {users ? (
+              !isEditing && (
+                <button
+                  onClick={() => setIsEditing(true)}
+                  className="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+                >
+                  Edit Profile
+                </button>
+              )
+            ) : (
+              <button
+                onClick={() => navigate("/login")}
+                className="mt-4 btn btn-secondary text-white px-4 py-2 rounded-lg hover:bg-red-500 transition"
+              >
+                Log In
+              </button>
+            )}
+          
         </div>
 
         {/* Edit Form (only when editing) */}
@@ -92,6 +119,7 @@ const UserProfile = () => {
                 placeholder="Enter image URL"
               />
             </div>
+          
             <div className="flex justify-between items-center">
               <button
                 onClick={handleUpdate}

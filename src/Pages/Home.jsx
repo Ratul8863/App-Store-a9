@@ -49,6 +49,8 @@ const Home = () => {
         <title>App-Store | Home</title>
        </Helmet>
 
+      
+
       {/* Trending */}
       <div className='text-center'>
         <h2 className="text-7xl font-bold mb-10">The apps you love. <br />

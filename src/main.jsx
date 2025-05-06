@@ -17,7 +17,7 @@ createRoot(document.getElementById('root')).render(
     
      <HelmetProvider>
      <RouterProvider router={router} />
-     <Toaster position="top-right" reverseOrder={false} /> ✅ Add Toaster here
+     <Toaster position="top-right" reverseOrder={false} />
      <ToastContainer></ToastContainer>
      </HelmetProvider>
  

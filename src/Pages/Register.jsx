@@ -10,7 +10,7 @@ const Register = () => {
   const navigate= useNavigate()
 const {handlesignup,updateuser,setusers, handlegoogle} = useContext(Valuecontext)
 const location = useLocation()
-console.log(location)
+// console.log(location)
 const [er,seter] = useState('')
 // console.log(value)
 
@@ -22,7 +22,7 @@ const [er,seter] = useState('')
         // const ConfirmPassword = form.ConfirmPassword.value
         const photo= form.photo.value;
         const name = form.name.value;
-        console.log(email,Password,name,photo)
+        // console.log(email,Password,name,photo)
 
 
 if (Password.length<6)
@@ -66,14 +66,14 @@ if (!/[^a-zA-Z0-9]/.test(Password))
               setusers ({...user,displayName : name , photoURL: photo})
             })
             .catch((error)=>{
-              console.log(error)
+              // console.log(error)
               setusers(user)
             })
-            console.log(user)
-            
+            // console.log(user)
+             toast.success("Successfully Registered");
           })
           .catch(error => {
-            console.log(error)
+            // console.log(error)
             
          
           });
@@ -94,7 +94,7 @@ navigate(`${location.state ? location.state : "/"}`)
         // The signed-in user info.
         // const user = result.user;
         // IdP data available using getAdditionalUserInfo(result)
-        
+        toast.success("Successfully Registered");
         navigate(`${location.state ? location.state : "/"}`)
         // ...
       }).catch((error) => {
