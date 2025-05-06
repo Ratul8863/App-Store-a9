@@ -1,13 +1,15 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
-import toast from "react-hot-toast";
+// import toast from "react-hot-toast";
 import { Valuecontext } from "../Root/Root";
+import { Helmet } from "react-helmet-async";
+import { toast } from 'react-toastify';
 
 const AppDetails = () => {
   const data = useLoaderData();
   const { id } = useParams();
   const { users } = useContext(Valuecontext);
-
+  const newid = parseInt(id)
   const [app, setApp] = useState({});
   const [installed, setInstalled] = useState(false);
   const [wasInstalledOnce, setWasInstalledOnce] = useState(false);
@@ -15,18 +17,24 @@ const AppDetails = () => {
   const [reviewText, setReviewText] = useState("");
   const [reviewRating, setReviewRating] = useState("");
   const [reviews, setReviews] = useState([]);
+  const [notFound, setNotFound] = useState(false);
 
-  useEffect(() => {
-    const appDetails = data.find((singleApp) => singleApp.id === id);
-    if (appDetails) {
-      setApp(appDetails);
-      setReviews(appDetails.reviews || []);
+useEffect(() => {
+  const appDetails = data.find((singleApp) => singleApp.id === newid);
+  if (appDetails) {
+    setApp(appDetails);
+    setReviews(appDetails.reviews || []);
+    const installedApps = JSON.parse(localStorage.getItem("installedApps")) || [];
+    setWasInstalledOnce(installedApps.includes(id));
+  } else {
+    setNotFound(true); // ✅ mark as not found
+  }
+}, [data, id]);
 
-      // Check localStorage if this app was installed before
-      const installedApps = JSON.parse(localStorage.getItem("installedApps")) || [];
-      setWasInstalledOnce(installedApps.includes(id));
-    }
-  }, [data, id]);
+if (notFound) {
+  return <ErrorPages />; // 🔥 Render your 404 component
+}
+
 
   const handleInstall = () => {
     if (!installed) {
@@ -38,16 +46,17 @@ const AppDetails = () => {
 
         // Save install info in localStorage
         const installedApps = JSON.parse(localStorage.getItem("installedApps")) || [];
-        if (!installedApps.includes(id)) {
-          installedApps.push(id);
+        if (!installedApps.includes(newid)) {
+          installedApps.push(newid);
           localStorage.setItem("installedApps", JSON.stringify(installedApps));
         }
 
         toast.success("App installed successfully!");
+    
       }, 2000);
     } else {
       setInstalled(false);
-      toast("App uninstalled.");
+      toast.error("App uninstalled.");
     }
   };
 
@@ -99,6 +108,12 @@ const AppDetails = () => {
   } = app;
 
   return (
+
+
+    <>
+    <Helmet>
+        <title>App-Store | App-Details</title>
+       </Helmet>
     <div className="p-4 max-w-4xl mx-auto space-y-6">
       {/* Banner */}
       <img src={banner} alt="App Banner" className="w-full h-64 object-cover rounded-xl" />
@@ -190,6 +205,9 @@ const AppDetails = () => {
         </button>
       </div>
     </div>
+    
+    
+    </>
   );
 };
 

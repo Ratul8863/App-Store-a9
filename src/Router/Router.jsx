@@ -1,106 +1,57 @@
 import React from 'react';
-
-import {
-  createBrowserRouter,
-
-} from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import Root from '../Root/Root';
 import Home from '../Pages/Home';
-
 import Login from '../Pages/Login';
 import Register from '../Pages/Register';
-
 import Apps from '../Pages/Apps';
 import AppDetails from '../Pages/AppDetails';
 import Privetroute from '../Components/Privetroute';
 import UserProfile from '../Pages/UserProfiile';
-import ErrorPages from '../Pages/ErrorPages';
-
-
-
+import ErrorPages from '../Pages/ErrorPages'; // This is your 404 page
 
 export const router = createBrowserRouter([
   {
     path: "/",
-
-    Component: Root,
-    // errorElement: <ErrorPages></ErrorPages>,
-    //   errorElement : <ErrorPages></ErrorPages>,
+    element: <Root />, // Use element not Component
+    errorElement: <ErrorPages />, // This will catch any error in this route branch
     children: [
       {
         index: true,
         loader: () => fetch('/data.json'),
-        Component: Home
+        element: <Home />
       },
       {
         path: "/Apps",
         loader: () => fetch('/data.json'),
-        Component: Apps
-
+        element: <Apps />
       },
-
       {
         path: "/Login",
-        Component: Login
-
+        element: <Login />
       },
       {
         path: "/Register",
-        Component: Register
-
+        element: <Register />
       },
       {
         path: "/AppDetails/:id",
         loader: () => fetch('/data.json'),
-        element: <Privetroute>
-          <AppDetails></AppDetails>
-        </Privetroute>
-
+        element: (
+          <Privetroute>
+            <AppDetails />
+          </Privetroute>
+        )
       },
       {
         path: "/UserProfile",
-        Component: UserProfile
+        element: <UserProfile />
       },
-
-
-    ]
-
     
+    ]
   },
   {
-    path : '*',
-    element : <ErrorPages></ErrorPages>
+    path: "*", // This catches any undefined child route (like /abc)
+    element: <ErrorPages />
   }
 ]);
-
-
-
-
-
-
-
-
-
-
-//   {path : "Blogs" ,
-//     loader : ()=> fetch ('../Blogs.json'),
-//     Component : Blogs
-// },
-
-// {
-//   path : "/Doctorsdetails/:newid" ,
-//   loader : ()=> fetch ('../Doctors.json'),
-//   Component : Doctorsdetails
-// },
-
-// {
-// path : "/Bookings" ,
-// loader : ()=> fetch ('../Doctors.json'),
-// Component : Bookings
-// },
-
-
-// {
-// path : "/Contactus" ,
-// Component : Contactus
-// }

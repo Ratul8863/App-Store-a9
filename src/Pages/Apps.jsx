@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useLoaderData } from "react-router-dom";
 import AppCard from './AppCard';
+import { Helmet } from "react-helmet-async";
 
 const Apps = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -39,7 +40,11 @@ const Apps = () => {
   const recentlyLaunched = data.filter(app => app.downloads < 1500000);
 
   return (
-    <div className="px-4 py-8 space-y-12">
+    <>
+<Helmet>
+        <title>App-Store | Apps</title>
+       </Helmet>
+<div className="px-4 py-8 space-y-12">
       {/* Slider */}
       <div
         ref={sliderRef}
@@ -100,6 +105,8 @@ const Apps = () => {
         </div>
       </div>
     </div>
+    </>
+    
   );
 };
 

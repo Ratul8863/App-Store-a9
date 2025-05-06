@@ -1,8 +1,9 @@
 import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Valuecontext } from '../Root/Root';
-import toast from 'react-hot-toast';
+
 import { FaGoogle } from 'react-icons/fa';
+import { toast } from 'react-toastify';
 
 
 const Register = () => {
@@ -69,7 +70,7 @@ if (!/[^a-zA-Z0-9]/.test(Password))
               setusers(user)
             })
             console.log(user)
-            
+             
           })
           .catch(error => {
             console.log(error)
@@ -77,7 +78,7 @@ if (!/[^a-zA-Z0-9]/.test(Password))
          
           });
        
-
+          navigate(`${location.state ? location.state : "/"}`)
 
 
     }

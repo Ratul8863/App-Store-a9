@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { Valuecontext } from '../Root/Root';
 import { FaGoogle } from "react-icons/fa";
+import { toast } from 'react-toastify';
 
 const Login = () => {
   const navigate= useNavigate()
@@ -23,7 +24,10 @@ console.log(location,state)
         .then(result => {
             const user = result.user;
             console.log(user)
+            toast.success("Log in Successful");
+            // alert("Log in Successful")
           navigate(`${location.state ? location.state : "/"}`)
+          
             
           })
           .catch(error => {
@@ -32,6 +36,7 @@ console.log(location,state)
             seterrormsg(errorc)
 
             alert("Invalid email or password")
+
          
           });
     
@@ -47,7 +52,7 @@ console.log(location,state)
         // The signed-in user info.
         // const user = result.user;
         // IdP data available using getAdditionalUserInfo(result)
-        
+        toast.success("Log in Successful");
         navigate(`${location.state ? location.state : "/"}`)
         // ...
       }).catch((error) => {

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import AppCard from './AppCard';
+import { Helmet } from 'react-helmet-async';
 
 
 const Home = () => {
@@ -44,6 +45,9 @@ const Home = () => {
           ➡
         </button>
       </div> */}
+      <Helmet>
+        <title>App-Store | Home</title>
+       </Helmet>
 
       {/* Trending */}
       <div className='text-center'>

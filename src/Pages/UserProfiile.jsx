@@ -2,6 +2,8 @@ import React, { useContext, useState } from "react";
 import { updateProfile } from "firebase/auth";
 import { Valuecontext } from "../Root/Root";
 import { FaUserCircle } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
+import { toast } from "react-toastify";
 
 const UserProfile = () => {
   const { users } = useContext(Valuecontext);
@@ -10,12 +12,21 @@ const UserProfile = () => {
   const [message, setMessage] = useState("");
   const [isEditing, setIsEditing] = useState(false);
 
+
+
+
+
   const handleUpdate = async () => {
+    if (name.trim().length < 1) {
+      toast.error("Name must be at least 1 character");
+      return;
+    }
     try {
       await updateProfile(users, {
         displayName: name,
         photoURL: photoURL,
       });
+      toast.success(" Profile updated successfully!")
       setMessage("✅ Profile updated successfully!");
       setIsEditing(false);
     } catch (error) {
@@ -25,7 +36,13 @@ const UserProfile = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-blue-100 to-purple-200 px-4">
+   <>
+   
+   <Helmet>
+        <title>App-Store | My-Profile</title>
+       </Helmet>
+
+   <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-blue-100 to-purple-200 px-4">
       <div className="w-full max-w-xl bg-white bg-opacity-80 backdrop-blur-md shadow-xl rounded-2xl p-8 space-y-8">
         <h2 className="text-3xl font-bold text-center text-gray-800">My Profile</h2>
 
@@ -94,6 +111,8 @@ const UserProfile = () => {
         )}
       </div>
     </div>
+   
+   </>
   );
 };
 
