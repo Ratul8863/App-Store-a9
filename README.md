@@ -22,10 +22,7 @@ This project simulates a modern App Store platform with essential features inclu
 It focuses on real-world SPA features and responsive design to create a professional user experience.
 
 ---
-<div class="border">
-  ![Project Screenshot](https://i.ibb.co/WN8djb1j/Screenshot-2025-06-25-145241.png)
-</div>
-
+<img src="https://i.ibb.co/WN8djb1j/Screenshot-2025-06-25-145241.png" alt="Project Screenshot" style="border:1px solid #ccc; border-radius:8px;" width="600" />
 
 ## 🔑 Key Features
 
@@ -47,14 +44,20 @@ It focuses on real-world SPA features and responsive design to create a professi
 ## 🛠️ Tech Stack
 
 ### ⚛️ Frontend
-- **React.js** (Vite)
-- **React Router DOM**
-- **Tailwind CSS + DaisyUI**
-- **Firebase Authentication**
-- **SweetAlert2 / React Toastify**
-- **React Helmet Async**
-- **Heroicons** or **React Icons**
-- **Imgbb** for image hosting
+
+![React](https://img.shields.io/badge/React.js-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![React Router](https://img.shields.io/badge/React_Router_DOM-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![DaisyUI](https://img.shields.io/badge/DaisyUI-5A0FC8?style=for-the-badge&logo=daisyui&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase_Auth-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
+![SweetAlert2](https://img.shields.io/badge/SweetAlert2-FF4154?style=for-the-badge&logo=sweetalert&logoColor=white)
+![React Toastify](https://img.shields.io/badge/React_Toastify-1B1F23?style=for-the-badge&logo=react&logoColor=white)
+![React Helmet](https://img.shields.io/badge/React_Helmet_Async-222222?style=for-the-badge&logo=react&logoColor=white)
+![React Icons](https://img.shields.io/badge/React_Icons-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+![Heroicons](https://img.shields.io/badge/Heroicons-0F172A?style=for-the-badge&logo=heroicons&logoColor=white)
+![ImgBB](https://img.shields.io/badge/ImgBB_Image_Hosting-0099FF?style=for-the-badge&logo=imgur&logoColor=white)
+
 
 ---
 
