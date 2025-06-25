@@ -68,7 +68,7 @@ VITE_projectId=your_project_id
 VITE_storageBucket=your_storage_bucket
 VITE_messagingSenderId=your_messagingSenderId
 VITE_appId=your_appId
-VITE_serverURL=https://your-server.vercel.app
+
 
 - Step 5: Run the development server
 npm run dev
