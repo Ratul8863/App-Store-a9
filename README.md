@@ -22,8 +22,10 @@ This project simulates a modern App Store platform with essential features inclu
 It focuses on real-world SPA features and responsive design to create a professional user experience.
 
 ---
+<div class="border">
+  ![Project Screenshot](https://i.ibb.co/WN8djb1j/Screenshot-2025-06-25-145241.png)
+</div>
 
-![Project Screenshot](https://i.ibb.co/WN8djb1j/Screenshot-2025-06-25-145241.png)
 
 ## 🔑 Key Features
 
