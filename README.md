@@ -23,6 +23,8 @@ It focuses on real-world SPA features and responsive design to create a professi
 
 ---
 
+![Project Screenshot](https://i.ibb.co/WN8djb1j/Screenshot-2025-06-25-145241.png)
+
 ## 🔑 Key Features
 
 - 🔐 **Authentication** (Email/Password + Google Login) with Firebase
@@ -55,8 +57,9 @@ It focuses on real-world SPA features and responsive design to create a professi
 ---
 
 - Step 1: Clone the client repository
-
+--https://github.com/yourusername/appstore-client.git
 - Step 2: Navigate into the project folder
+--cd appstore-client
 
 - Step 3: Install dependencies
 npm install
