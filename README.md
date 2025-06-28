@@ -17,7 +17,7 @@ This project simulates a modern App Store platform with essential features inclu
 - Secure authentication
 - Dynamic routing
 - Personalized profiles
-- Interactive reviews
+- Interactive reviews.
 
 It focuses on real-world SPA features and responsive design to create a professional user experience.
 
